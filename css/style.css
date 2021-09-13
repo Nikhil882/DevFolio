@@ -1,0 +1,1213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #797979;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* START - Navigation Panel CSS */
+
+nav {
+    --text-color: #FFF;
+    --background-color: transparent;
+    --logo-color: #FFF;
+    --nav-height: 100px;
+    --text-hover-color: #000;
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 45px;
+    background-color: var(--background-color);
+    border-bottom: 0.5px dotted rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-scrolled {
+    --text-color: #000;
+    --background-color: #FFF;
+    --logo-color: rgb(240, 50, 60);
+    --nav-height: 60px;
+    --text-hover-color: rgb(240, 50, 60);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.5s ease-in-out;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 10px 28px;
+    color: var(--logo-color);
+    line-height: 80px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    line-height: 80px;
+    padding: 12px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--text-hover-color);
+}
+
+nav a.active {
+    color: #000;
+}
+
+
+/* END - Navigation Panel CSS */
+
+
+/* START - Home Section CSS */
+
+.banner {
+    width: 100%;
+    height: 720px;
+    background: linear-gradient(rgba(240, 50, 60, 0.9), rgba(240, 0, 50, 60.9)), url(images/home/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    width: 100%;
+}
+
+.content {
+    width: 50%;
+    padding: 0 80px;
+    margin-top: 280px;
+    color: #FFF;
+}
+
+.content h4 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.content h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 14px 25px;
+    margin-right: 10px;
+    border: 2px solid rgba(240, 50, 60, 0.1);
+    /* transition: 1s ease-in-out; */
+    position: relative;
+}
+
+.btn-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(240, 50, 60, 0.9);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.btn-background:hover::before {
+    transform: scale(1);
+}
+
+.btn-background {
+    background-color: #FFF;
+    color: rgba(240, 50, 60, 0.9);
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-background:hover {
+    color: #FFF;
+}
+
+.image {
+    width: 50%;
+}
+
+.image .hero {
+    width: auto;
+    height: 600px;
+    float: right;
+    margin-top: 120px;
+    margin-right: 80px;
+}
+
+.image .about-img {
+    width: 100%;
+}
+
+
+/* START - About Section CSS */
+
+.about-content {
+    width: 50%;
+    margin-top: 200px;
+    padding: 0 60px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-header p {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 45px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.section-header p::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 30px;
+    top: 7px;
+    left: -45px;
+    right: 0;
+    background-color: red;
+    z-index: -1;
+}
+
+.section-header p::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 3px;
+    top: 7px;
+    left: -10px;
+    background-color: red;
+    z-index: 1;
+}
+
+.section-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #414141;
+}
+
+.about-content .about-txt p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.progress-bar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.progress-bar ul li {
+    margin: 10px 0;
+}
+
+.progress-bar .bar-text {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.bar {
+    display: block;
+    height: 12px;
+    width: 100%;
+    background-color: rgb(121, 121, 121, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    height: 10px;
+    float: left;
+    background: #FF0000;
+    border-radius: 10px;
+}
+
+.progress-bar .web-design-bar {
+    width: 85%;
+    animation: web-design 2s ease-out;
+}
+
+.progress-bar .web-development-bar {
+    width: 95%;
+    animation: web-development 2s ease-out;
+}
+
+.progress-bar .apps-design-bar {
+    width: 90%;
+    animation: apps-design 2s ease-out;
+}
+
+.progress-bar .apps-development-bar {
+    width: 85%;
+    animation: apps-development 2s ease-out;
+}
+
+@keyframes web-design {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes web-development {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes apps-design {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes apps-development {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.btn-background-red::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #FFF;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.btn-background-red:hover::before {
+    transform: scale(1);
+}
+
+.btn-background-red {
+    color: #FFF;
+    background-color: rgb(239, 35, 60);
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-background-red:hover {
+    color: rgb(240, 50, 60);
+}
+
+
+/* START - Service Section CSS */
+
+.container {
+    padding: 90px 20px;
+}
+
+.col {
+    width: 100%;
+    margin: 0 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 10px;
+    height: auto;
+    width: 48%;
+    position: relative;
+    transition: color 0.4s ease-in-out;
+}
+
+.card-img {
+    border: 1px solid rgb(239, 35, 60);
+    height: 140px;
+    width: 220px;
+    box-sizing: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img i {
+    font-size: 3.8rem;
+    color: rgb(239, 35, 60);
+    transition: font-size 0.3s ease-in-out;
+}
+
+.card-content {
+    padding: 0 30px;
+}
+
+.card-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: left;
+    color: #000;
+    padding-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 140px;
+    background: rgb(239, 35, 60);
+    Z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover h2,
+.card:hover h4,
+.card:hover p {
+    color: #FFF !important;
+}
+
+.card:hover .card-img i {
+    font-size: 4.5rem;
+}
+
+
+/* START - Experience Section CSS */
+
+.timeline {
+    background: #FFF;
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 30px 0px;
+}
+
+.timeline .center-line {
+    position: absolute;
+    width: 2px;
+    height: 1302px;
+    background: rgb(239, 35, 60);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline .row {
+    display: flex;
+}
+
+.timeline .row-left {
+    justify-content: flex-start;
+}
+
+.timeline .row-right {
+    justify-content: flex-end;
+}
+
+.timeline .row section {
+    background: #FFF;
+    width: calc(50% - 30px);
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 10%);
+}
+
+.timeline .row-left section {
+    border-right: 5px solid #ddd;
+}
+
+.timeline .row-right section {
+    border-left: 5px solid #ddd;
+}
+
+.timeline .row section .timeline-year {
+    position: absolute;
+    width: 100%;
+    top: 45px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(239, 35, 60);
+}
+
+.timeline .row-left section .timeline-year {
+    left: calc(100% + 60px);
+}
+
+.timeline .row-right section .timeline-year {
+    right: calc(20% + 60px);
+}
+
+.timeline .row section i {
+    position: absolute;
+    top: 40px;
+    font-size: 2rem;
+    color: #ddd;
+}
+
+.timeline .row-left section i {
+    right: -15px;
+}
+
+.timeline .row-right section i {
+    left: -15px;
+    transform: rotate(180deg);
+}
+
+.timeline .row section h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #414141;
+    padding-bottom: 5px;
+}
+
+.timeline .row section h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #414141;
+    padding-bottom: 12px;
+}
+
+.timeline .row section p {
+    line-height: 1.5;
+}
+
+.timeline .row section::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    top: 48px;
+    background: #FFF;
+    border: 2px solid rgb(239, 35, 60);
+    border-radius: 12px;
+}
+
+.timeline .row-left section::before {
+    left: calc(100% + 27px);
+}
+
+.timeline .row-right section::before {
+    right: calc(100% + 27px);
+}
+
+
+/* START - Portfolio Section CSS */
+
+.portfolio-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.tab-col {
+    padding: 0 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    display: block;
+}
+
+.tab-col .tab {
+    padding: 8px 12px;
+}
+
+.tab-col .tab a {
+    color: #FFF;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.8;
+    transition: color 0.3s ease-in-out;
+}
+
+.tab-col .tab a:hover {
+    color: rgb(239, 35, 60);
+}
+
+.portfolio-container .portfolio-col {
+    width: 31%;
+    height: 100%;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.portfolio-container .portfolio-col .portfolio-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-container .portfolio-col .portfolio-img img {
+    width: inherit;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.portfolio-container .portfolio-col:hover .portfolio-img img {
+    margin-left: 15px;
+}
+
+.portfolio-container .portfolio-col .portfolio-text {
+    height: 60px;
+    width: calc(100% - 30px);
+    background: #FFF;
+    position: absolute;
+    top: 235px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-container .portfolio-col .portfolio-text p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f1f1f;
+    padding-left: 10px;
+}
+
+.portfolio-container .portfolio-col .portfolio-text a {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #FFF;
+    background: rgb(239, 35, 60);
+    border: 2px solid rgba(239, 35, 40, 0.2);
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.portfolio-container .portfolio-col:hover .portfolio-text a {
+    color: rgb(239, 35, 60);
+}
+
+.portfolio-container .portfolio-col .portfolio-text a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #FFF;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.portfolio-container .portfolio-col:hover .portfolio-text a::before {
+    transform: scale(1);
+}
+
+
+/* START - All Extra Section CSS */
+
+.section-bg-red {
+    background-color: rgb(239, 35, 60);
+}
+
+.content-space {
+    margin: 0 300px;
+    color: #FFF;
+}
+
+.content-space h4 {
+    color: #3d3d3d;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.content-space h1 {
+    font-size: 3.1rem;
+    padding-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+.content-space h1 span {
+    color: #3d3d3d;
+}
+
+.content-space p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+
+
+/* START - Price Section CSS */
+
+.price-col {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-card {
+    height: 539px;
+    width: 370px;
+}
+
+.price-card:nth-child(2) {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.price-card .price-header {
+    font-size: 30px;
+    padding: 45px 0 30px;
+    color: #414141;
+    position: relative;
+}
+
+.price-card:nth-child(2) .price-header {
+    color: rgb(239, 35, 60);
+}
+
+.price-card .price-header .price-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.price-card .price-header .price-amount small {
+    display: inline-block;
+    position: absolute;
+    top: 85px;
+    left: 130px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.price-card .price-header .price-amount p {
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.price-card .price-header .price-amount span {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: -10px;
+}
+
+.price-card .price-body {
+    padding-bottom: 20px;
+}
+
+.price-card .price-body ul {
+    list-style: none;
+    line-height: 45px;
+}
+
+.price-card .price-footer {
+    padding-top: 15px;
+}
+
+.btn-background-black {
+    background: #414141;
+    color: #FFF;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-background-black:hover {
+    color: #414141;
+}
+
+.btn-background-black::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #FFF;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-background-black:hover::before {
+    transform: scale(1);
+}
+
+
+/* START - Review Section CSS */
+
+.review-quote-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 40px;
+}
+
+.slideshow-container {
+    position: relative;
+    /* width: 1000px; */
+    overflow: hidden;
+    margin: 0 250px;
+}
+
+.slideshow-container .mySlides {
+    position: relative;
+}
+
+.fade {
+    animation: slider 5s infinite;
+    /* animation-delay: 5s; */
+}
+
+@keyframes slider {
+    0% {
+        left: 50%;
+        opacity: 1;
+    }
+    20%,
+    40%,
+    60% {
+        left: 0%;
+        opacity: 1;
+    }
+    100% {
+        left: -50%;
+        opacity: 1;
+    }
+}
+
+.slideshow-container .mySlides .review-img {
+    width: 120px;
+    position: relative;
+    border-radius: 120px;
+    margin: 0 350px;
+    z-index: 1;
+}
+
+.slideshow-container .mySlides .review-img img {
+    width: 100%;
+    border: 5px dotted #FFF;
+    border-radius: 120px;
+    padding: 10px;
+}
+
+.slideshow-container .mySlides .outer-box {
+    position: relative;
+    background: #FFF;
+    padding: 70px 10px 30px 10px;
+    margin-top: -60px;
+    border-radius: 400px;
+}
+
+.slideshow-container .mySlides .outer-box .review-text p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.slideshow-container .mySlides .outer-box .review-text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(239, 35, 60);
+    margin-bottom: 8px;
+}
+
+.slideshow-container .mySlides .outer-box .review-text h4 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.prev,
+.next {
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 15px 2px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-active {
+    background: #FFF;
+}
+
+
+/* START - Team Section CSS */
+
+.card .team-img {
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.card .team-img img {
+    width: inherit;
+    height: inherit;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card .team-text {
+    width: 50%;
+    padding: 30px;
+}
+
+.card .team-text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(239, 35, 60);
+    padding-bottom: 5px;
+}
+
+.card .team-text h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f1f1f;
+    padding-bottom: 15px;
+}
+
+.card .team-text p {
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+.card .team-text .team-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card .team-text .team-links a {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: rgb(239, 35, 60);
+    transition: border 0.3s ease-in-out;
+}
+
+.card:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.card:hover .team-text .team-links .link-btn {
+    border: 2px solid #FFF;
+}
+
+.card .team-text .team-links .link-btn:hover i {
+    color: rgb(239, 35, 60);
+}
+
+
+/* START - Contact Section CSS */
+
+#contact .row {
+    background: rgb(239, 35, 60);
+}
+
+.contact-image {
+    background: url(/images/contact/contact.jpg) left center no-repeat;
+    background-size: contain;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 700px;
+    margin-left: 500px;
+    background: rgb(239, 35, 60);
+    overflow: hidden;
+    padding: 100px 40px 0;
+}
+
+.contact-form .form-elements {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-elements input,
+.contact-form .form-elements textarea {
+    color: #FFF;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.8;
+    outline: none;
+}
+
+ ::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+.contact-form button {
+    margin: 35px 0 70px;
+}
+
+
+/* START - Blog Section CSS */
+
+.blog-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+}
+
+.blog-col {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-col .blog-img {
+    overflow: hidden;
+}
+
+.blog-col .blog-img img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.blog-col .blog-img:hover img {
+    transform: scale(1.1);
+}
+
+.blog-col .blog-content {
+    padding: 30px;
+}
+
+.blog-col .blog-content h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1f1f1f;
+    margin-bottom: 10px;
+}
+
+.blog-col .blog-data {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.blog-col .blog-data p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.blog-col .blog-data p i {
+    margin-right: 2px;
+}
+
+.blog-col p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+/* START - Footer Section CSS */
+
+.footer {
+    color: #FFF;
+    padding-top: 70px;
+}
+
+.footer .footer-details h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer .footer-details h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer .footer-cont-info p {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-cont-info p:first-child {
+    border-right: 1px solid #FFF;
+}
+
+.footer .footer-social-links {
+    margin-bottom: 20px;
+}
+
+.footer .footer-social-links a {
+    padding: 0 10px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.footer .copyright {
+    position: relative;
+    margin-top: 30px;
+    padding: 25px 0;
+}
+
+.footer .copyright::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    top: 0;
+    left: 25%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer .copyright p {
+    font-size: 1rem;
+}
+
+.footer .copyright a {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    color: #414141;
+}
